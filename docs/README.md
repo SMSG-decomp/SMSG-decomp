@@ -15,7 +15,7 @@ Kaitai Struct allows you to define binary formats in a YAML-based `.ksy` file, w
 |------|-----------|-------------|
 | [`savegame.ksy`](savegame.ksy) | `.sve` | Saved game (the course, its golfers, the club's staff, money and history) |
 | [`course.ksy`](course.ksy) | `.cse` | Course saved for championship play (the course, its record and its golfer types) |
-| [`golfer.ksy`](golfer.ksy) | `.pro` | Golfer profile (looks, lines, ratings and face picture) |
+| [`golfer.ksy`](golfer.ksy) | `.pro`, `.chr`, `.glf` | Golfer profile (looks, lines, ratings and optional face picture) |
 | [`highscores.ksy`](highscores.ksy) | `.sve` | High score table (`top10.sve`) |
 | [`spritebank.ksy`](spritebank.ksy) | `.flc` | Sprite bank (an FLC animation holding several sequences) |
 
@@ -74,3 +74,7 @@ ksdump --format json /path/to/simgolf/flics/<directory>/<name>.flc spritebank.ks
 ## Sample Files
 
 Note: every file above can be found in your SimGolf installation, in the directory named beside it.
+
+The golfer schema also accepts shipped files with a stock head and no embedded
+portrait, such as `Themes\Standard\Joe Pro.glf` and
+`Themes\The Sims\Gwendoline.chr`. These end after the ratings at 0x722 bytes.
