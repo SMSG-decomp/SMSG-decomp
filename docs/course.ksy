@@ -69,6 +69,7 @@ types:
         type: s4
       - id: money
         type: s4
+        doc: Club cash in units of $100; multiply by 100 for dollars.
       - id: best_scores
         size: 0x28
       - id: tour_index

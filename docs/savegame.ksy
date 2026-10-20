@@ -63,6 +63,7 @@ types:
         type: s4
       - id: money
         type: s4
+        doc: Club cash in units of $100; multiply by 100 for dollars.
       - id: tour_index
         type: s4
       - id: holes
