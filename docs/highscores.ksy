@@ -40,12 +40,14 @@ types:
         doc: The course's skill rating.
       - id: cash
         type: s4
-        doc: The club's money.
+        doc: Club cash in units of $100; multiply by 100 for dollars.
       - id: unused
         size: 0xa
       - id: level
         type: s2
-        doc: The player's level; the score multiplies by level + 1.
+        doc: |
+          Difficulty index; the ranking score is
+          (cash / 10 + skill + fun) * (level + 1), using integer division.
       - id: course_id
         type: s4
         doc: The course's identifier; the table keeps one entry per course.
